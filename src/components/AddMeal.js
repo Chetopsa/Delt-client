@@ -34,7 +34,7 @@ const AddMeal = () => {
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch("/api/addMeal", {
+        fetch(process.env.BACKENDURL +"/api/addMeal", {
             headers: {
                 "content-type": "application/json",
             },

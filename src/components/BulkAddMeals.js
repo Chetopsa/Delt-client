@@ -85,7 +85,7 @@ const BulkAddMeals = () => {
       
       if (descriptions[dayName].lunch) {
         mealPromises.push(
-          fetch("/api/addMeal", {
+          fetch(process.env.BACKENDURL +"/api/addMeal", {
             headers: { "content-type": "application/json" },
             method: "POST",
             credentials: "include",
@@ -102,7 +102,7 @@ const BulkAddMeals = () => {
       // Add dinner if description exists
       if (descriptions[dayName].dinner) {
         mealPromises.push(
-          fetch("/api/addMeal", {
+          fetch(process.env.BACKENDURL +"/api/addMeal", {
             headers: { "content-type": "application/json" },
             method: "POST",
             credentials: "include",

@@ -1,6 +1,7 @@
+
 export async function requestAuth() {
     let ret = null;
-    await fetch('/api/validation', {
+    await fetch(process.env.BACKENDURL +'/api/validation', {
         method: 'GET',
         credentials: 'include', // ensure cookies are sent with the request
     })

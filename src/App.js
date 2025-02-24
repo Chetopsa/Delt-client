@@ -5,6 +5,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import ProtectedRoutes from './utils/ProtectedRoutes'
 import Navbar from "./components/Navbar";
 
+
 // import pages
 import Login from './screens/login';
 import Home from './screens/home';
@@ -16,7 +17,8 @@ import AdminDashboard from './screens/adminDashboard';
 
 
 function App(children) {
-
+  console.log("App.js " + process.env.BACKENDURL);
+  console.log("App.js " + process.env.REACT_APP_BACKENDURL);
   return (
       
         <BrowserRouter>

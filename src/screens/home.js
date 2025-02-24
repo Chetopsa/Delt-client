@@ -18,8 +18,10 @@ const Home = () => {
         setIsModalOpen(true);
       }
     }, [location.search]); // will run when query params change
-
+    console.log("Home.js " + process.env.REACT_APP_VAR);
+    
     return (
+
        <>
         <div className="text-center bg-gray-100 p-12 font-sans">
             <h1 className="text-3xl text-gray-800">Welcome to Delts Dine</h1>

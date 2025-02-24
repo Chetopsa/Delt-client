@@ -86,7 +86,7 @@ const Menu = () => {
     // get isAdmin status
     const fetchIsAdmin = async () => {
       try {
-        const res = await fetch(process.env.BACKENDURL +"/api/validation", {
+        const res = await fetch(process.env.REACT_APP_BACKENDURL +"/api/validation", {
           method: "GET",
           credentials: "include",
         });
@@ -102,7 +102,7 @@ const Menu = () => {
     console.log("dateString: " + dateString);
     const fetchMenu = async () => {
       try {
-        const res = await fetch(process.env.BACKENDURL +"/api/getMenu", {
+        const res = await fetch(process.env.REACT_APP_BACKENDURL +"/api/getMenu", {
           headers: { "content-type": "application/json" },
           method: "POST",
           credentials: "include",
@@ -137,7 +137,7 @@ const Menu = () => {
     };
     const fetchRSVPS = async (updatedMeals) => {
       try {
-        const res = await fetch(process.env.BACKENDURL +"/api/getRSVPs?date=" +currentDate.toISOString().split('T')[0], {
+        const res = await fetch(process.env.REACT_APP_BACKENDURL +"/api/getRSVPs?date=" +currentDate.toISOString().split('T')[0], {
           method: "GET",
           credentials: "include",
         });
@@ -189,7 +189,7 @@ const Menu = () => {
     try {
       for (const mealID of selectedMeals) {
         console.log("selected meals " , mealID);
-        const response = await fetch(process.env.BACKENDURL +"/api/newRSVP", {
+        const response = await fetch(process.env.REACT_APP_BACKENDURL +"/api/newRSVP", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           credentials: "include",
@@ -238,7 +238,7 @@ const Menu = () => {
 
   const handleDeleteRSVP = async (mealID) => {
     try {
-      const response = await fetch(process.env.BACKENDURL +"/api/deleteRSVP", {
+      const response = await fetch(process.env.REACT_APP_BACKENDURL +"/api/deleteRSVP", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -272,7 +272,7 @@ const Menu = () => {
   };
   const handleDeleteItem = async (mealID) => {
     try {
-      const res = await fetch(process.env.BACKENDURL +"/api/deleteMeal", {
+      const res = await fetch(process.env.REACT_APP_BACKENDURL +"/api/deleteMeal", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",

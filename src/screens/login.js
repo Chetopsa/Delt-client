@@ -6,7 +6,7 @@ const Login = () => {
     // const {validated, setValidatedWithExpiration} = useValidation();
     // console.log("protected routes " + validated);
 
-    window.location.href = process.env.BACKENDURL +'/auth/google'; //redirect user to backend for authentification
+    window.location.href = process.env.REACT_APP_BACKENDURL +'/auth/google'; //redirect user to backend for authentification
     // setValidatedWithExpiration();
     // console.log("protected routes " + validated);
   return (

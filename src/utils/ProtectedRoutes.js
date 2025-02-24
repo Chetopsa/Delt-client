@@ -1,7 +1,6 @@
 import React, {useLayoutEffect, useState} from 'react'
 import { Outlet, Navigate, useLocation  } from "react-router-dom";
 import { requestAuth } from './requestAuth';
-const apiUrl = process.env.REACT_APP_API_URL;
 
 function ProtectedRoutes() {
     const location = useLocation(); // for checking admin routes

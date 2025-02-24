@@ -112,7 +112,7 @@ const Menu = () => {
         if (!res.ok) throw new Error("Server gave bad response for getting menu");
 
         const data = await res.json();
-        const dayMap = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+        const dayMap = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         
         const transformedMeals = data.meals.map((meal) => ( {
           mealID: meal.mealID,

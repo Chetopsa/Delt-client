@@ -271,6 +271,10 @@ const Menu = () => {
     }
   };
   const handleDeleteItem = async (mealID) => {
+    const userConfirmed = window.confirm("Are you sure you want to permently delete meal a meal?");
+    if (!userConfirmed) {
+      return;
+    }
     try {
       const res = await fetch(process.env.REACT_APP_BACKENDURL +"/api/deleteMeal", {
         method: "POST",

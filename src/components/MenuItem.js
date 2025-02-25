@@ -36,7 +36,7 @@ const MenuItem = ({ item, onSelect, isSelected, isAdmin, disabled, onDelete, onD
         rounded-lg 
         shadow-md 
         w-48
-        h-76
+        h-64
         mx-2
         transition-all
         duration-200
